@@ -1,8 +1,6 @@
 # InterestDays
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/interest_days`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provide interest day factor calculation based on ISDA conventions e.g. Isda Act 360.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can simple use the InterestDays::Calculator like:
+
+’’’
+InterestDays::Calculator.new(start_date: start, end_date: end, strategy: :isda_act_360)
+’’’
+
+current there a three supported conventions:
+- :isda_act_360
+- :isda_act_365
+- :isda_30_e_360
+
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/interest_days.
+Bug reports and pull requests are welcome on GitHub at https://github.com/eugenmueller/interest_days.
 
 ## License
 
