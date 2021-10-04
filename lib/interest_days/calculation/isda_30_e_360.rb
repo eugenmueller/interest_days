@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module InterestDays
   module Calculation
+    # ISDA 30 E 360 Convention calculation
     class Isda30e360 < Base
       RELEVANT_DAYS_IN_YEAR = 360
 

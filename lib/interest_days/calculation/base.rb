@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module InterestDays
   module Calculation
+    # Base calculation class
     class Base
       attr_reader :start_date, :end_date
 
@@ -15,7 +18,7 @@ module InterestDays
       private
 
       def days
-        @end_date  - @start_date
+        @end_date - @start_date
       end
     end
   end
