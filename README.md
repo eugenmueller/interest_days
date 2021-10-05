@@ -23,9 +23,9 @@ Or install it yourself as:
 You can simple use the InterestDays::Calculator like:
 
 ```ruby
-  calculator = InterestDays::Calculator.new(start_date: start, end_date: end, strategy: :isda_act_360)
+calculator = InterestDays::Calculator.new(start_date: start, end_date: end, strategy: :isda_act_360)
 
-  calculator.interest_day_count_factor
+calculator.interest_day_count_factor
 ```
 
 current there a three supported conventions:
