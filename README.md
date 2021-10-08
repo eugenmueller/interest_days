@@ -1,7 +1,7 @@
 # InterestDays
 
 This gem provide interest day factor calculation based on ISDA conventions e.g. Isda Act 360.
-Since version 0.2 Support of 30/360 US EOM and 30/360 Bond Basis 
+Since version 0.2 interest_day gem support 30/360 US EOM and 30/360 Bond Basis conventions. 
 
 ## Installation
 
@@ -29,7 +29,7 @@ You can simple use the InterestDays::Calculator like:
     calculator.interest_day_count_factor
     ```
 
-current there a three supported conventions:
+currently there a three supported conventions:
 - :isda_act_360
 - :isda_act_365
 - :isda_30_e_360
