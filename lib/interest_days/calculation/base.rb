@@ -12,7 +12,7 @@ module InterestDays
       end
 
       def day_count_factor
-        raise NotImplementedError, "#{self.class} has nit implemented method '#{__method__}"
+        raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}"
       end
 
       private
