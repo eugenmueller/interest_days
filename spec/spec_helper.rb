@@ -4,7 +4,11 @@ require "interest_days"
 require "date"
 
 require "simplecov"
-SimpleCov.start
+SimpleCov.start do
+  add_group "Libraries", "lib/"
+  add_group "Calculations", "lib/calculation"
+  track_files "{lib}/**/*.rb"
+end
 
 require "codecov"
 SimpleCov.formatter = SimpleCov::Formatter::Codecov
