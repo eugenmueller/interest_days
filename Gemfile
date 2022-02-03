@@ -7,10 +7,12 @@ gemspec
 
 gem "rake", "~> 13.0"
 
-gem "rspec", "~> 3.0"
+group :test, :development do
+  gem "rspec", "~> 3.0"
 
-gem "rubocop", "~> 1.7"
+  gem "rubocop", "~> 1.7"
 
-gem "simplecov", "~> 0.21.2"
+  gem "simplecov", "~> 0.21.2"
 
-gem "codecov", "~> 0.6.0"
+  gem "codecov", "~> 0.6.0"
+end
