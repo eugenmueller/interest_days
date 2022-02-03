@@ -18,6 +18,12 @@ RSpec.describe InterestDays::Calculator do
     it { expect(calculator.strategy).to be(InterestDays::Calculation::IsdaAct360) }
   end
 
+  describe "isda act 364 strategy based calculation" do
+    let(:strategy) { :isda_act_364 }
+
+    it { expect(calculator.strategy).to be(InterestDays::Calculation::IsdaAct364) }
+  end
+
   describe "isda act 365 strategy based calculation" do
     let(:strategy) { :isda_act_365 }
 

@@ -6,6 +6,7 @@ require "interest_days/calculation/base"
 require "interest_days/calculation/thirty_threesixty_base"
 require "interest_days/calculation/us_eom_30_360"
 require "interest_days/calculation/isda_act_360"
+require "interest_days/calculation/isda_act_364"
 require "interest_days/calculation/isda_act_365"
 require "interest_days/calculation/isda_30_e_360"
 
