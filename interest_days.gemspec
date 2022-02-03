@@ -5,7 +5,7 @@ require_relative "lib/interest_days/version"
 Gem::Specification.new do |spec|
   spec.name          = "interest_days"
   spec.version       = InterestDays::VERSION
-  spec.authors       = ["Eugen Mueller"]
+  spec.authors       = ["Eugen Mueller", "Kevin Liebholz"]
   spec.email         = ["eugen.mllr@gmail.com"]
 
   spec.summary       = "Interest day calculation"
