@@ -1,4 +1,21 @@
 
+## [0.3.0] / 2022-02-03
+==================
+
+  * Bump version to 0.3.0
+  * Finish including isda act 364 (#11)
+  
+## [0.2.1] / 2022-02-03
+==================
+
+  * Bump version to 0.2.1
+  * Change the gemspec metadata.
+  * Setup siplecov.
+  * Add spec for act 364 strategy.
+  * Add act 364 calculation strategy.
+  * Tests isda 30 e 360 (#5)
+  * Add codecov integration.
+
 ## [0.2.0] / 2021-10-08
 ==================
 
