@@ -8,12 +8,6 @@
 ## [0.2.1] / 2022-02-03
 ==================
 
-  * Bump version to 0.3.0
-  * Finish including isda act 364 (#11)
-  
-## [0.2.1] / 2022-02-03
-==================
-
   * Bump version to 0.2.1
   * Change the gemspec metadata.
   * Setup siplecov.
