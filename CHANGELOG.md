@@ -1,4 +1,11 @@
 
+## [0.4.0] / 2022-03-22
+==================
+
+  * Update readme file.
+  * Bump version to 0.4.0.
+  * Add Isda Act Act strategy. #11
+
 ## [0.3.0] / 2022-02-03
 ==================
 
