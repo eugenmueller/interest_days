@@ -34,6 +34,7 @@ currently there a five supported conventions:
 - :isda_act_360
 - :isda_act_364
 - :isda_act_365
+- :isda_act_act
 - :isda_30_e_360
 - :us_eom_30_360
 - :bond_basis_30_360
