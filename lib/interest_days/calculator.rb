@@ -21,6 +21,7 @@ module InterestDays
 
     def strategies
       @strategies ||= {
+        isda_act_act: InterestDays::Calculation::IsdaActAct,
         isda_act_360: InterestDays::Calculation::IsdaAct360,
         isda_act_364: InterestDays::Calculation::IsdaAct364,
         isda_act_365: InterestDays::Calculation::IsdaAct365,
