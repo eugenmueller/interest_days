@@ -24,6 +24,7 @@ module InterestDays
         isda_act_360: InterestDays::Calculation::IsdaAct360,
         isda_act_364: InterestDays::Calculation::IsdaAct364,
         isda_act_365: InterestDays::Calculation::IsdaAct365,
+        isda_act_act: InterestDays::Calculation::IsdaActAct,
         isda_30_e_360: InterestDays::Calculation::Isda30e360,
         bond_basis_30_360: InterestDays::Calculation::Isda30e360,
         us_eom_30_360: InterestDays::Calculation::UsEom30360
