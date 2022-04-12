@@ -27,7 +27,7 @@ module InterestDays
       private
 
       def start_date_after_end_date?
-        start_date >= end_date
+        start_date > end_date
       end
 
       def days

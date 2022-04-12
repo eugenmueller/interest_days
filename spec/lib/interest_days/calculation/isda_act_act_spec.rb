@@ -84,4 +84,22 @@ RSpec.describe InterestDays::Calculation::IsdaActAct do # rubocop:disable Metric
       it { expect { calc.day_count_factor }.to raise_error(InterestDays::Calculation::StartDateBeforeEndDateError) }
     end
   end
+
+  describe "#start_date_after_end_date?" do
+    let(:start_date) { Date.new(2020, 5, 3) }
+    let(:end_date) { Date.new(2021, 2, 3) }
+
+    subject(:calc) { described_class.new(start_date: start_date, end_date: end_date) }
+
+    it { expect(calc.send(:start_date_after_end_date?)).to be false }
+  end
+
+  describe "#days" do
+    let(:start_date) { Date.new(2020, 5, 3) }
+    let(:end_date) { Date.new(2021, 2, 3) }
+
+    subject(:calc) { described_class.new(start_date: start_date, end_date: end_date) }
+
+    it { expect(calc.send(:days)).to eq(end_date - start_date) }
+  end
 end
