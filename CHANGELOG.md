@@ -1,4 +1,9 @@
 
+## [0.4.1] / 2022-04-12
+==================
+
+  * Fix start_date_after_end_date method considering the case that start_date and end_date are equal.
+
 ## [0.4.0] / 2022-03-22
 ==================
 
