@@ -10,8 +10,8 @@ SimpleCov.start do
   track_files "{lib}/**/*.rb"
 end
 
-# require "codecov"
-# SimpleCov.formatter = SimpleCov::Formatter::Codecov
+require "codecov"
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
