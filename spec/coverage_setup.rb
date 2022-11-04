@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Coverage by SimpleCov/CodeCov
-if ENV["CODECOV"]
+if ENV["CODECOV_TOKEN"]
   require "simplecov"
   SimpleCov.configure do
     add_filter "spec"
