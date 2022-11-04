@@ -13,7 +13,7 @@ jobs:
         ruby-version: '2.7.3'
         bundler-cache: true
     - name: Run the default task
-      run: bundle exec rake
+      run: COVERAGE=true bundle exec rake
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:

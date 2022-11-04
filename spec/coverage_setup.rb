@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 # Coverage by SimpleCov/CodeCov
-if ENV["CODECOV"]
+if ENV.fetch("COVERAGE", false)
   require "simplecov"
-  SimpleCov.config do
+  SimpleCov.start do
     add_filter "spec"
     merge_timeout 20
     enable_coverage :branch
@@ -14,7 +14,6 @@ if ENV["CODECOV"]
   require "codecov" # require also simplecov
   # if you want the formatter to upload the results use SimpleCov::Formatter::Codecov instead
   SimpleCov.formatter = SimpleCov::Formatter::Codecov # upload with step in github actions
-  SimpleCov.start
 elsif !ENV["CI"]   # exclude in CI
   require "simplecov"
   SimpleCov.configure do
