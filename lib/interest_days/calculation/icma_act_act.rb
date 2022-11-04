@@ -40,7 +40,7 @@ module InterestDays
       end
 
       def end_date_period_factor
-        (end_date.yday).fdiv(end_date_days_in_year)
+        end_date.yday.fdiv(end_date_days_in_year)
       end
 
       def years_in_between_factor
