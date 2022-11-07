@@ -9,6 +9,7 @@ require "interest_days/calculation/isda_act_360"
 require "interest_days/calculation/isda_act_364"
 require "interest_days/calculation/isda_act_365"
 require "interest_days/calculation/isda_act_act"
+require "interest_days/calculation/icma_act_act"
 require "interest_days/calculation/isda_30_e_360"
 
 module InterestDays

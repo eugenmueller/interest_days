@@ -1,4 +1,8 @@
 
+## [0.5.0] / 2022-11-07
+==================
+  * Add ICMA act/act strategy.
+
 ## [0.4.1] / 2022-04-12
 ==================
 
@@ -9,7 +13,7 @@
 
   * Update readme file.
   * Bump version to 0.4.0.
-  * Add Isda Act Act strategy. #11
+  * Add Isda act/act strategy. #11
 
 ## [0.3.0] / 2022-02-03
 ==================

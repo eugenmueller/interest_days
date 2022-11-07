@@ -8,8 +8,8 @@ module InterestDays
 
       # D2 day
       def end_date_days
-        if ((@start_date.month == 2 && @start_date.date == days_in_month_for(@start_date)) &&
-           (@end_date.month == 2 && @end_date.date == days_in_month_for(@end_date))) ||
+        if ((@start_date.month == 2 && @start_date.day == days_in_month_for(@start_date)) &&
+           (@end_date.month == 2 && @end_date.day == days_in_month_for(@end_date))) ||
            (@end_date.day == 31 && @start_date.day >= 30)
           RELEVANT_DAY_IN_MONTH
         else
@@ -19,7 +19,7 @@ module InterestDays
 
       # D1 day
       def start_date_days
-        if (@start_date.month == 2 && @start_date.date == days_in_month_for(@start_date)) || @start_date.day == 31
+        if (@start_date.month == 2 && @start_date.day == days_in_month_for(@start_date)) || @start_date.day == 31
           RELEVANT_DAY_IN_MONTH
         else
           @start_date.day

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    interest_days (0.4.1)
+    interest_days (0.5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -9,11 +9,16 @@ GEM
     ast (2.4.2)
     codecov (0.6.0)
       simplecov (>= 0.15, < 0.22)
+    coderay (1.1.3)
     diff-lcs (1.4.4)
     docile (1.4.0)
+    method_source (1.0.0)
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     rainbow (3.0.0)
     rake (13.0.6)
     regexp_parser (2.1.1)
@@ -64,6 +69,7 @@ PLATFORMS
 DEPENDENCIES
   codecov (~> 0.6.0)
   interest_days!
+  pry (~> 0.13.1)
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.7)

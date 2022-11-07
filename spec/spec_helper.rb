@@ -1,17 +1,12 @@
 # frozen_string_literal: true
 
+require_relative "coverage_setup"
+
 require "interest_days"
 require "date"
-
-require "simplecov"
-SimpleCov.start do
-  add_group "Libraries", "lib/"
-  add_group "Calculations", "lib/calculation"
-  track_files "{lib}/**/*.rb"
-end
-
-require "codecov"
-SimpleCov.formatter = SimpleCov::Formatter::Codecov
+require "pry"
+# require "codecov"
+# SimpleCov.formatter = SimpleCov::Formatter::Codecov
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

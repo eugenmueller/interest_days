@@ -52,6 +52,11 @@ RSpec.describe InterestDays::Calculator do
 
     it { expect(calculator.strategy).to be(InterestDays::Calculation::Isda30e360) }
   end
+  describe "icma act act strategy based calculation" do
+    let(:strategy) { :icma_act_act }
+
+    it { expect(calculator.strategy).to be(InterestDays::Calculation::IcmaActAct) }
+  end
 
   describe "when strategy not available" do
     let(:strategy) { :foo }
