@@ -8,7 +8,7 @@ RSpec.describe InterestDays::Calculation::IsdaActAct do # rubocop:disable Metric
 
       subject(:calc) { described_class.new(start_date: start_date, end_date: end_date) }
 
-      it "calculate the right day count factor" do
+      it "calculates the right day count factor" do
         year_fraction_end = end_date.yday.fdiv(365)
         year_fraction_start = (366 - start_date.yday).fdiv(366)
         expectation = year_fraction_end + year_fraction_start
@@ -23,7 +23,7 @@ RSpec.describe InterestDays::Calculation::IsdaActAct do # rubocop:disable Metric
 
       subject(:calc) { described_class.new(start_date: start_date, end_date: end_date) }
 
-      it "calculate the right day count factor" do
+      it "calculates the right day count factor" do
         year_fraction_end = end_date.yday.fdiv(366)
         year_fraction_start = (365 - start_date.yday).fdiv(365)
         expectation = year_fraction_end + year_fraction_start
@@ -38,7 +38,7 @@ RSpec.describe InterestDays::Calculation::IsdaActAct do # rubocop:disable Metric
 
       subject(:calc) { described_class.new(start_date: start_date, end_date: end_date) }
 
-      it "calculate the right day count factor" do
+      it "calculates the right day count factor" do
         expectation = (end_date - start_date).fdiv(365)
 
         expect(calc.day_count_factor).to eql(expectation)
@@ -51,7 +51,7 @@ RSpec.describe InterestDays::Calculation::IsdaActAct do # rubocop:disable Metric
 
       subject(:calc) { described_class.new(start_date: start_date, end_date: end_date) }
 
-      it "calculate the right day count factor" do
+      it "calculates the right day count factor" do
         expectation = (end_date - start_date).fdiv(366)
 
         expect(calc.day_count_factor).to eql(expectation)
@@ -64,7 +64,7 @@ RSpec.describe InterestDays::Calculation::IsdaActAct do # rubocop:disable Metric
 
       subject(:calc) { described_class.new(start_date: start_date, end_date: end_date) }
 
-      it "calculate the right day count factor" do
+      it "calculates the right day count factor" do
         year_fraction_end = end_date.yday.fdiv(365)
         year_between = 366.fdiv(366)
         year_fraction_start = (365 - start_date.yday).fdiv(365)

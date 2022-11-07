@@ -10,7 +10,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
       context "when 29th of february not in period" do
         let(:start_date) { Date.new(2020, 5, 3) }
 
-        it "calculate the right day count factor" do
+        it "calculates the right day count factor" do
           expectation = (end_date - start_date).fdiv(described_class::DAYS_IN_YEAR)
 
           expect(calc.day_count_factor).to eql(expectation)
@@ -20,7 +20,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
       context "when 29th of february is in period" do
         let(:start_date) { Date.new(2020, 2, 3) }
 
-        it "calculate the right day count factor" do
+        it "calculates the right day count factor" do
           expectation = (end_date - start_date).fdiv(described_class::DAYS_IN_LEAP_YEAR)
 
           expect(calc.day_count_factor).to eql(expectation)
@@ -34,7 +34,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
       context "when 29th of february not in period" do
         let(:end_date) { Date.new(2020, 2, 3) }
 
-        it "calculate the right day count factor" do
+        it "calculates the right day count factor" do
           expectation = (end_date - start_date).fdiv(described_class::DAYS_IN_YEAR)
 
           expect(calc.day_count_factor).to eql(expectation)
@@ -44,7 +44,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
       context "when 29th of february is in period" do
         let(:end_date) { Date.new(2020, 5, 3) }
 
-        it "calculate the right day count factor" do
+        it "calculates the right day count factor" do
           expectation = (end_date - start_date).fdiv(described_class::DAYS_IN_LEAP_YEAR)
 
           expect(calc.day_count_factor).to eql(expectation)
@@ -58,7 +58,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
           let(:start_date) { Date.new(2020, 1, 1) }
           let(:end_date) { Date.new(2020, 12, 31) }
 
-          it "calculate the right day count factor" do
+          it "calculates the right day count factor" do
             expectation = (end_date - start_date).fdiv(described_class::DAYS_IN_LEAP_YEAR)
 
             expect(calc.day_count_factor).to eql(expectation)
@@ -69,7 +69,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
           let(:start_date) { Date.new(2020, 3, 1) }
           let(:end_date) { Date.new(2020, 12, 31) }
 
-          it "calculate the right day count factor" do
+          it "calculates the right day count factor" do
             expectation = (end_date - start_date).fdiv(described_class::DAYS_IN_YEAR)
 
             expect(calc.day_count_factor).to eql(expectation)
@@ -82,7 +82,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
       let(:start_date) { Date.new(2020, 1, 1) }
       let(:end_date) { Date.new(2026, 12, 30) }
 
-      it "calculate the right factor" do
+      it "calculates the right factor" do
         start_date_period_factor =
           (described_class::DAYS_IN_LEAP_YEAR - start_date.yday).fdiv(described_class::DAYS_IN_LEAP_YEAR)
         end_date_period_factor = end_date.yday.fdiv(described_class::DAYS_IN_YEAR)
@@ -103,7 +103,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
 
       let(:interest) { 10.00 }
 
-      it "calculate the interest with the right factor" do
+      it "calculates the interest with the right factor" do
         expectation = amount / 100 * interest * 150.fdiv(described_class::DAYS_IN_YEAR)
 
         expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)
@@ -119,7 +119,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
 
       let(:interest) { 10.00 }
 
-      it "calculate the interest with the right factor" do
+      it "calculates the interest with the right factor" do
         expectation = amount / 100 * interest * (end_date - start_date).fdiv(described_class::DAYS_IN_LEAP_YEAR)
 
         expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)
@@ -135,7 +135,7 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
 
       let(:interest) { 10.00 }
 
-      it "calculate the interest with the right factor" do
+      it "calculates the interest with the right factor" do
         start_date_period_factor =
           (described_class::DAYS_IN_LEAP_YEAR - start_date.yday).fdiv(described_class::DAYS_IN_LEAP_YEAR)
         end_date_period_factor = end_date.yday.fdiv(described_class::DAYS_IN_YEAR)
