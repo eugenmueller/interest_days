@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "simplecov"
 require_relative "coverage_setup"
 
 require "interest_days"
