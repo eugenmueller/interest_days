@@ -14,7 +14,7 @@ jobs:
         bundler-cache: true
     - name: Run the default task
       run: COVERAGE=true bundle exec rake
-      with:
+      env:
         token: ${{ secrets.CODECOV_TOKEN }}
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
