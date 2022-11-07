@@ -14,12 +14,12 @@ module InterestDays
           return start_date_period_factor + years_in_between_factor + end_date_period_factor
         end
 
-        days.fdiv(days_in_period)
+        days.fdiv(year_days_in_period)
       end
 
       private
 
-      def days_in_period
+      def year_days_in_period
         period_contains_leap_day? ? DAYS_IN_LEAP_YEAR : DAYS_IN_YEAR
       end
 
