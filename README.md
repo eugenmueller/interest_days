@@ -38,6 +38,7 @@ currently there a five supported conventions:
 - :isda_30_e_360
 - :us_eom_30_360
 - :bond_basis_30_360
+- :icma_act_act
 
 As often, [Wikipedia](https://en.wikipedia.org/wiki/Day_count_convention) is the best resource, so check it out to get more insights into these conventions.
 
