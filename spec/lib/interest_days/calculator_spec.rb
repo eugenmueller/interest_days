@@ -47,11 +47,13 @@ RSpec.describe InterestDays::Calculator do
 
     it { expect(calculator.strategy).to be(InterestDays::Calculation::UsEom30360) }
   end
+
   describe "bond_basis_30_360 strategy based calculation" do
     let(:strategy) { :bond_basis_30_360 }
 
     it { expect(calculator.strategy).to be(InterestDays::Calculation::Isda30e360) }
   end
+
   describe "icma act act strategy based calculation" do
     let(:strategy) { :icma_act_act }
 
@@ -62,6 +64,6 @@ RSpec.describe InterestDays::Calculator do
     let(:strategy) { :foo }
 
     it { expect(calculator.strategy).to be_nil }
-    it { expect { calculator.interest_day_count_factor }.to raise_error }
+    it { expect { calculator.interest_day_count_factor }.to raise_error(StandardError) }
   end
 end
