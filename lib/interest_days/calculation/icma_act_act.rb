@@ -10,7 +10,7 @@ module InterestDays
       def day_count_factor
         return days.fdiv(start_date_days_in_year) if start_date_and_end_date_in_same_year?
 
-        if years_in_between_factor > 1
+        if years_in_between_factor.positive?
           return start_date_period_factor + years_in_between_factor + end_date_period_factor
         end
 
