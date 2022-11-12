@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    interest_days (0.5.1)
+    interest_days (0.5.2)
 
 GEM
   remote: https://rubygems.org/

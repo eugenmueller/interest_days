@@ -1,5 +1,5 @@
 
-## [0.5.1] / 2022-11-11
+## [0.5.2] / 2022-11-11
 ==================
   * Fix ICMA act/act strategy for interest periods longer than one year.
 
