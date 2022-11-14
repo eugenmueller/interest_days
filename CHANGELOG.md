@@ -1,4 +1,8 @@
 
+## [0.5.3] / 2022-11-14
+==================
+  * Fix ICMA act/act strategy for interest periods relates to small periods within a leap year.
+
 ## [0.5.2] / 2022-11-11
 ==================
   * Fix ICMA act/act strategy for interest periods longer than one year.
