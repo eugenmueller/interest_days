@@ -1,3 +1,7 @@
+
+[![codecov](https://codecov.io/gh/eugenmueller/interest_days/branch/main/graph/badge.svg?token=5MVC9MJQ90)](https://codecov.io/gh/eugenmueller/interest_days)
+[![Interest days CI](https://github.com/eugenmueller/interest_days/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/eugenmueller/interest_days/actions/workflows/main.yml)
+
 # InterestDays
 
 This gem provides interest day factor calculation based on ISDA conventions e.g. Isda Act 360.
