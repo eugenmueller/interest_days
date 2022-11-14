@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe "InterestDays::Calculation::IcmaActAct", "#day_count_factor", type: :integration do
+RSpec.describe "InterestDays::Calculation::IcmaActAct", "#day_count_factor", type: :integration do # rubocop:disable Metrics/BlockLength
   subject(:calc) { InterestDays::Calculation::IcmaActAct.new(start_date: start_date, end_date: end_date) }
 
   let(:amount) { 10_000.00 }
@@ -57,6 +57,61 @@ RSpec.describe "InterestDays::Calculation::IcmaActAct", "#day_count_factor", typ
 
       amount / 100 * interest * (start_date_period_factor + years_factor + end_date_period_factor)
     end
+
+    it "calculates the interest with the right factor" do
+      expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)
+    end
+  end
+
+  describe "integration example leap year one day" do
+    let(:start_date) { Date.new(2024, 1, 1) }
+    let(:end_date) { Date.new(2024, 1, 2) }
+
+    let(:expectation) { amount / 100 * interest * 1.0.fdiv(365) }
+
+    it "calculates the interest with the right factor" do
+      expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)
+    end
+  end
+
+  describe "integration example leap year april months" do
+    let(:start_date) { Date.new(2024, 1, 2) }
+    let(:end_date) { Date.new(2024, 4, 2) }
+
+    let(:expectation) { amount / 100 * interest * (end_date - start_date).fdiv(366) }
+
+    it "calculates the interest with the right factor" do
+      expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)
+    end
+  end
+
+  describe "integration example leap year july months" do
+    let(:start_date) { Date.new(2024, 4, 2) }
+    let(:end_date) { Date.new(2024, 7, 2) }
+
+    let(:expectation) { amount / 100 * interest * (end_date - start_date).fdiv(365) }
+
+    it "calculates the interest with the right factor" do
+      expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)
+    end
+  end
+
+  describe "integration example leap year october months" do
+    let(:start_date) { Date.new(2024, 7, 2) }
+    let(:end_date) { Date.new(2024, 10, 2) }
+
+    let(:expectation) { amount / 100 * interest * (end_date - start_date).fdiv(365) }
+
+    it "calculates the interest with the right factor" do
+      expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)
+    end
+  end
+
+  describe "integration example leap year december months" do
+    let(:start_date) { Date.new(2024, 10, 2) }
+    let(:end_date) { Date.new(2024, 12, 2) }
+
+    let(:expectation) { amount / 100 * interest * (end_date - start_date).fdiv(365) }
 
     it "calculates the interest with the right factor" do
       expect(amount / 100 * interest * calc.day_count_factor).to eql(expectation)

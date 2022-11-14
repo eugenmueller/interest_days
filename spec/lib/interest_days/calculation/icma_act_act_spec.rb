@@ -68,9 +68,8 @@ RSpec.describe InterestDays::Calculation::IcmaActAct do # rubocop:disable Metric
     let(:end_date) { Date.new(2026, 12, 30) }
 
     let(:expectation) do
-      start_date_period_factor =
-        (described_class::DAYS_IN_LEAP_YEAR - start_date.yday).fdiv(described_class::DAYS_IN_LEAP_YEAR)
-      end_date_period_factor = end_date.yday.fdiv(described_class::DAYS_IN_YEAR)
+      start_date_period_factor = (366 - start_date.yday).fdiv(366)
+      end_date_period_factor = end_date.yday.fdiv(365)
       years_factor = (end_date.year - start_date.year) - 1
 
       start_date_period_factor + years_factor + end_date_period_factor
